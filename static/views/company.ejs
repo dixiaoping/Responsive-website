@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="lopscoop"/>
+    <meta name="description" content="lopscoop"/>
+    <meta name="author" content="lopscoop">
+    <link rel="icon" href="images/favicon.ico">
+    <title>lopscoop</title>
+    <link  rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/layout.css"/>
+</head>
+<body>
+<!--导航-->
+<%- include('header.ejs') %>
+<!--导航end-->
+<div class="lop-aboutcontent lop-about">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="aritical-title">
+                <li class="aritical-titlelist aritical-titlecolor"><span class="item_APIdocOne">lopscoop</span></li>
+                <li class="aritical-titlelist"><span class="item_APIdocTwo">联系我们</span></li>
+                <li class="aritical-titlelist"><span class="item_APIdocThree">隐私政策</span></li>
+                <li class="aritical-titlelist"><span class="item_APIdocThree">服务条款</span></li>
+            </ul>
+        </div>
+        <div class="col-md-9 api-helpmain">
+            <div class="artical-con active">
+                <div class="article-conmain">
+                    <div class="article-apicareful">
+                        <h3 style="line-height:36px">Lopscoop是MoppoMobi旗下的一款专注印度本地化泛娱乐类内容的互联网产品，为内容网盟变现提供解决方案的互联网信息流内容产品。</h3>
+                        <p>宝莱坞、板球、幽默段子和明星八卦等都是印度人民津津乐道的内容，占据着印度网民每日阅读80%的时间。Lopscoop整合人们每天关注的各类新闻资讯和趣事要闻，以英语和印地语（共占据印度90%以上用户）的内容形式发布到平台上，实时更新热门内容，为用户提供丰富的阅读资源和信息。</p>
+                        <p>Lopscoop目前在印度德里有80多人的创作团队，结合用户UGC以及签署的版权合作，每日更新的优质内容可达3000多篇。另外，国内在浦东张江有三十多人的研发，运营，市场人员负责开发维护，运营，推广Lopscoop这个平台。现在，Lopscoop APP流量日活已突破100万，并且用户还在快速增长中</p>
+                    </div>
+                </div>
+            </div>
+            <div class="artical-con">
+                <div class="article-conmain">
+                    <div class="article-apicareful">
+                        <ul>
+                            <li class="form-group lop-contact">
+                                <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">姓名<span style="color:red;">*</span></label>
+                                <div class="col-md-9 col-sm-8 col-xs-10">
+                                    <input type="text" class="form-control" id="lop-name" placeholder="姓名" onblur="obj.commentLimmit(this,50)">
+                                </div>
+                            </li>
+                            <li class="form-group lop-contact">
+                                <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">电话<span style="color:red;">*</span></label>
+                                <div class="col-md-9 col-sm-8 col-xs-10">
+                                    <input type="text" class="form-control" id="lop-phone" placeholder="电话" onblur="obj.verifyInput(this)">
+                                    <div class="verify-message verify-style">你填写的内容格式不正确</div>
+                                </div>
+                            </li>
+                            <li class="form-group lop-contact">
+                                <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">邮箱</label>
+                                <div class="col-md-9 col-sm-8 col-xs-10">
+                                    <input type="email" class="form-control" id="lop-email" placeholder="邮箱" onblur="obj.fChkMail(this)">
+                                    <div class="verify-emailmessage verify-style">你填写的内容格式不正确</div>
+                                </div>
+                            </li>
+                            <li class="form-group lop-contact">
+                                <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">备注</label>
+                                <div class="col-md-9 col-sm-8 col-xs-10">
+                                    <textarea class="form-control" rows="4" id="lop-note" onblur="obj.commentLimmit(this,300)"></textarea>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                                <div class="col-md-9 col-sm-8 col-xs-10"><div class="verify-style verify-name">姓名或电话不能为空</div></div>
+                            </li>
+                            <li class="form-group">
+                                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                                <div class="col-md-9 col-sm-8 col-xs-10"><div class="lop-btn btn-warning">提交</div></div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="artical-con">
+                <div class="article-conmain">
+                    <div class="article-apicareful">
+                        <div class="lop-aboutTitle">隐私政策</div>
+                        <h4 style="margin-top:20px;">隐私保护政策</h4>
+                        <p>  LopScoop平台非常重视对用户的隐私保护。LopScoop会对注册用户的个人信息保密，在未经用户许可的情况下，LopScoop承诺不会将信息披露给第三方，但以下情况除外：</p>
+                        <p>1. 基于国家法律法规的规定而对外披露；</p>
+                        <p>2. 应国家司法机关及其他有关机关基于法定程序的要求而披露；</p>
+                        <p>3. 为保护LopScoop平台或您的合法权益而披露；</p>
+                        <p>此外，如遇以下情况，LopScoop平台亦不需要承担任何责任：</p>
+                        <p>1. 用户自己将注册信息告知他人或与他人共享账户，由此导致的资料泄露。</p>
+                        <p>2. 由于黑客攻击、计算机病毒侵入或因政府管制而造成的暂时性关闭等不可抗因素而造 成的个人资料泄露、丢失。</p>
+                        <h4 style="margin-top:20px;">密码安全</h4>
+                        <p> LopScoop平台用户通过创建的密码确保其安全性。请不要和他人分享账户信息。如果您和他人共享一台电脑，请在离开时退出LopScoop平台以保证您的信息不被他人获取。</p>
+                        <h4 style="margin-top:20px;">隐私政策的变更</h4>
+                        <p>我们可能对本隐私政策进行修改。如果进行修改，我们将在LopScoop平台主页上发布通知，以告知用户被修改的内容以及指示用户审阅更新的隐私政策。如果您在对本隐私政策任何细微修改发布后继续使用网站，则表示您同意遵守任何该等修改</p>
+                        <p>如果您就本隐私政策有任何疑问，请与我们联系：contact@moppomobi.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="artical-con">
+                <div class="article-conmain">
+                    <div class="article-apicareful">
+                        <div class="lop-aboutTitle">服务条款</div>
+                        <h4 style="margin-top:20px;">服务条款的接受</h4>
+                        <p>用户一经完成注册过程，即视为完全接受本协议的所有条款</p>
+                        <p>LopScoop平台为用户提供移动应用广告的相关服务。LopScoop平台保留不经事先通知因维修、升级或其他原因暂停本网站服务任何部分的权利。LopScoop平台保留变更服务的权利。</p>
+                         <h4>用户行为</h4>
+                        <p>用户在使用LopScoop平台提供的服务时，不得发布含有以下内容的信息或应用：</p>
+                        <p>1. 违反国家宪法所确定的基本原则的</p>
+                        <p>1. 违反国家宪法所确定的基本原则的</p>
+                        <p>3. 损害国家荣誉和利益的</p>
+                        <p>4. 煽动民族仇恨、民族歧视，破坏民族团结的</p>
+                        <p>5. 破坏国家宗教政策，宣扬邪教和封建迷信的</p>
+                        <p>6. 散布谣言，扰乱社会秩序，破坏社会稳定的</p>
+                        <p>7. 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的</p>
+                        <p>8. 侮辱或者诽谤他人，侵害他人合法权益的</p>
+                        <p>9. 含有法律、行政法规禁止的其他内容的</p>
+                        <p>用户不得用任何不正当手段损害本平台其他用户及本平台的利益及声誉</p>
+                        <p>用户违反上述规定的一条或多条，本平台有权随时解除合作</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="lop-successmessage">您已提交成功，感谢您的支持，我们将尽快和您联系！</div>
+<%- include('bottom.ejs') %>
+<script>
+    $(document).on("click",".lop-btn",function(){
+        if(!$("#lop-name").val()||!$("#lop-phone").val()){
+            return $(".verify-name").css({display:"block"});
+        }else{
+            $(".verify-name").css({display:"none"});
+            $.ajax({
+                url:"http://192.168.1.5:10002/lopscoop-api/cw/upload_feedback",
+                type: "GET",
+                dataType:'jsonp',
+                data:{
+                    "user_name":$("#lop-name").val(),
+                    "mobile_num":$("#lop-phone").val(),
+                    "type":1,
+                    "email":$("#lop-email").val(),
+                    "desc":$("#lop-note").val()
+                },
+                success:function(data){
+                    if(data.code==200){
+                        $(".lop-successmessage").css({display:"block"});
+                        $(".form-control").val("");
+                        setTimeout(function(){
+                            $(".lop-successmessage").css({display:"none"});
+                        },3000)
+                    }
+                }
+            })
+        }
+    });
+</script>
+</body>
+</html>
+
+
+

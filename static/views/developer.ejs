@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="lopscoop"/>
+    <meta name="description" content="lopscoop"/>
+    <meta name="author" content="lopscoop">
+    <link rel="icon" href="http://charm.uamazed.com/moppomobi/images/favicon.ico">
+    <title>lopscoop 产品介绍</title>
+    <link  rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/layout.css"/>
+</head>
+<body>
+<!--导航-->
+<%- include('header.ejs') %>
+<!--导航end-->
+<div class="container">
+    <div class="container-title">尊敬的开发者，您好，欢迎主动与我们联系，期待未来我们合作愉快，填写好表单后，我们的商务与开发会第一时间联系您</div>
+</div>
+<div class="lop-about">
+    <div class="container">
+        <div class="row">
+            <div class="article-conmain">
+                <div class="article-apicareful">
+                    <ul>
+                        <li class="form-group lop-contact">
+                            <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">姓名 <span style="color:red;">*</span></label>
+                            <div class="col-md-10 col-sm-8 col-xs-10">
+                                <input type="text" class="form-control" id="lop-name"  placeholder="姓名" onblur="obj.commentLimmit(this,50)">
+                            </div>
+                        </li>
+                        <li class="form-group lop-contact">
+                            <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">电话 <span style="color:red;">*</span></label>
+                            <div class="col-md-10 col-sm-8 col-xs-10">
+                                <input type="text" class="form-control" id="lop-phone" placeholder="电话" onblur="obj.verifyInput(this)">
+                                <div class="verify-message verify-style">你填写的内容格式不正确</div>
+                            </div>
+                        </li>
+                        <li class="form-group lop-contact">
+                            <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">应用名称</label>
+                            <div class="col-md-10 col-sm-8 col-xs-10">
+                                <input type="text" class="form-control" id="lop-application"  placeholder="应用名称" onblur="obj.commentLimmit(this,150)">
+                            </div>
+                        </li>
+                        <li class="form-group lop-contact">
+                            <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">微信</label>
+                            <div class="col-md-10 col-sm-8 col-xs-10">
+                                <input type="text" class="form-control"  id="lop-wx" placeholder="微信"  onblur="obj.commentLimmit(this,50)">
+                            </div>
+                        </li>
+                        <li class="form-group lop-contact">
+                            <label  class="col-md-2 col-sm-2 col-xs-2 control-label lop-inputDescript">备注</label>
+                            <div class="col-md-10 col-sm-8 col-xs-10">
+                                <textarea class="form-control" rows="4" id="lop-note" placeholder="备注"  onblur="obj.commentLimmit(this,300)"></textarea>
+                            </div>
+                        </li>
+                        <li><div class="col-md-2 col-sm-2 col-xs-2"></div><div class="col-md-9 col-sm-8 col-xs-10"><div class="verify-style verify-name">姓名或电话不能为空</div></div>
+                        </li>
+                        <li class="form-group">
+                            <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                            <div class="col-md-10 col-sm-8 col-xs-10"><div class="lop-btn btn-warning" id="lop-product">提交</div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="lop-successmessage">您已提交成功，感谢您的支持，我们将尽快和您联系！</div>
+<!-- 合作伙伴 -->
+<%- include('bottom.ejs') %>
+<script>
+    $(document).on("click",".lop-btn",function(){
+        if(!$("#lop-name").val()||!$("#lop-phone").val()){
+            return $(".verify-name").css({display:"block"});
+        }else{
+            $(".verify-name").css({display:"none"});
+            $.ajax({
+                url:"http://192.168.1.5:10002/lopscoop-api/cw/upload_feedback",
+                type: "GET",
+                dataType:'jsonp',
+                data:{
+                    "user_name":$("#lop-name").val(),
+                    "mobile_num":$("#lop-phone").val(),
+                    "type":2,
+                    "app_name":$("#lop-application").val(),
+                    "wechat_id":$("#lop-wx").val(),
+                    "desc":$("#lop-note").val()
+                },
+                success:function(data){
+                    if(data.code==200){
+                        $(".lop-successmessage").css({display:"block"});
+                        $(".form-control").val("");
+                        setTimeout(function(){
+                            $(".lop-successmessage").css({display:"none"});
+                        },3000)
+                    }
+                }
+            })
+        }
+
+    });
+</script>
+</body>
+</html>
+
+
+

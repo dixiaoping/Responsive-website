@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="keywords" content="lopscoop"/>
+    <meta name="description" content="lopscoop"/>
+    <meta name="author" content="lopscoop">
+    <link rel="icon" href="http://charm.uamazed.com/moppomobi/images/favicon.ico">
+    <title>lopscoop</title>
+    <link  rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/layout.css"/>
+    <link rel="stylesheet" href="http://charm.uamazed.com/moppomobi/css/productServer.css"/>
+    <style>
+        body{background: #f3f3f3;}
+        .is-sticky.stuck {
+            position: fixed;
+            top: 58px;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1;
+            padding-top:5px;
+            padding-bottom:0;
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<%- include('header.ejs') %>
+<!--导航end-->
+<div class="ui-plat-index ui-index-unifyCss container" style="padding-top:65px">
+    <div class="row">
+        <div class="ui-plat-top ui-index-unifyCss">
+            <div class="lop-logo">
+                <img src="http://charm.uamazed.com/moppomobi/images/productServer/lopscoop.png" alt="" style="display:block;margin:0 auto;">
+                <p class="lop-logfont">全球领先的印度内容联盟方案解决平台</p>
+            </div>
+
+        </div>
+        <div class="ui-plat-nav is-sticky clearfix">
+            <div class="active commonbtn dspBtn">DSP</div>
+            <div class="commonbtn sspBtn">SSP</div>
+        </div>
+        <div class="ui-plat-infos ui-index-unifyCss clearfix">
+            <div class="active commoncontent ui-plat-dsp">
+                <div class="ui-top-dsp"> <p>DSP<label>（需求方平台）</label></p></div>
+                <ul>
+                    <li><p>简单高效的移动广告移动流量接入方式</p></li>
+                    <li><p>RTB 模式下支持优先购买、私有竞价和公开竞价，且兼容实时与非实时竞价</p></li>
+                    <li><p>品牌广告与效果广告成效双保证</p></li>
+                    <li><p>一站式接入 ：10万家移动软件开发商，20多万个应用的每天60亿次广告曝光</p></li>
+                    <li><p>日覆盖超过 8000 万印度智能手机</p></li>
+                    <li><p>多维度的广告频次控制</li>
+                    <li><p>按广告类型精准匹配终端流量</p></li>
+                    <li><p>全面的受众分析，充分了解每一个终端的广告需求，精准推送每一个广告，真正实现“信息找人”时代的红利</p></li>
+                </ul>
+            </div>
+            <div class="commoncontent ui-plat-ssp">
+                <div class="ui-top-ssp">
+                    <p>SSP<label>（供给方平台）</label></p>
+                </div>
+                <ul>
+                    <li><p>便利高价的内容变现方式与用户自增长引擎SDK，不仅可以变现,此外，还可以带动用户自传播，实现用户增长</p></li>
+                    <li><p>一站式接入全球顶级移动广告平台（Facebook Audience Network，Admob）</p></li>
+                    <li><p>丰富的广告展现形式横幅广告、插屏广告、开屏广告、原生广告</p></li>
+                    <li><p>毫秒级的广告送达 保障每次的曝光收益，二次传播收益倍增，与用户一起分成广告收入</p></li>
+                    <li><p>基于大数据的深度挖掘、情景模式匹配和 RTB 交易模式来保证 eCPM</p></li>
+                    <li><p>独立透明的报表结算</p></li>
+                    <li><p>最先进的技术整合（API、SDK，H5）</p></li>
+                    <li><p>印度唯一的内容信息流接入平台,19种印度本土语言，日更新10万+级版权内容，汇聚印度娱乐，体育，情感，幽默等所有热门领域</p></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<%- include('bottom.ejs') %>
+</body>
+</html>
+
+
+
