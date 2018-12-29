@@ -1,4 +1,4 @@
-# Responsive-website
+# Responsive
 <div> This is a responsive website developed by node.</div>
 
 <div>下载到本地 运行需要node环境 </div>
